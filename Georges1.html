@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails des Visites - Plusieurs Jours</title>
+  <style>
+    /* Style général de la page */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    .museum-name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .guide-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .guide-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    .guide-details {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .schedule {
+      margin-top: 20px;
+    }
+    .day-header {
+      font-size: 20px;
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+    .schedule-item {
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #e0f7fa;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .time {
+      font-size: 16px;
+      font-weight: 600;
+      color: #007b7f;
+    }
+    .type, .lang {
+      font-size: 14px;
+      color: #555;
+      margin-left: 15px;
+    }
+    .download-btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+ 
+  <div class="museum-name">Musée National des Mines de Fer Luxembourgeoises</div> <!-- Nom du musée ajouté ici -->
+ <h1>Détails des Visites</h1>
+</header>
+
+<div class="content">
+  <div class="guide-header">
+    <div class="guide-name">Georges Pûtz</div>
+    <div class="guide-details">Détails des visites et horaires pour différents jours</div>
+  </div>
+
+  <!-- Jour 1 -->
+  <div class="schedule">
+    <div class="day-header">2 Avril 2025</div>
+    <div class="schedule-item">
+      <div class="time">09:00 - 10:30</div>
+      <div>
+        <div class="type">Visite culturelle</div>
+        <div class="lang">Langue : Français</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="time">11:00 - 12:30</div>
+      <div>
+        <div class="type">Visite touristique</div>
+        <div class="lang">Langue : Anglais</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jour 2 -->
+  <div class="schedule">
+    <div class="day-header">3 Avril 2025</div>
+    <div class="schedule-item">
+      <div class="time">10:00 - 11:30</div>
+      <div>
+        <div class="type">Visite guidée historique</div>
+        <div class="lang">Langue : Allemand</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="time">14:00 - 15:30</div>
+      <div>
+        <div class="type">Visite en groupe</div>
+        <div class="lang">Langue : Espagnol</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jour 3 -->
+  <div class="schedule">
+    <div class="day-header">4 Avril 2025</div>
+    <div class="schedule-item">
+      <div class="time">09:00 - 10:30</div>
+      <div>
+        <div class="type">Visite privée</div>
+        <div class="lang">Langue : Français</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="time">11:00 - 12:30</div>
+      <div>
+        <div class="type">Visite touristique</div>
+        <div class="lang">Langue : Anglais</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="download-btn" onclick="generateGuideFile()">Télécharger Guide #1</button>
+</div>
+
+<script>
+  function generateGuideFile() {
+    const data = {
+      "museum": "Musée National des Mines de Fer Luxembourgeoises", // Ajout du nom du musée dans les données
+      "guide": "Georges Pûtz",
+      "dates": [
+        { 
+          "date": "2025-04-02", 
+          "time": "09:00 - 10:30", 
+          "type": "Visite culturelle", 
+          "langue": "Français" 
+        },
+        { 
+          "date": "2025-04-02", 
+          "time": "11:00 - 12:30", 
+          "type": "Visite touristique", 
+          "langue": "Anglais" 
+        },
+        { 
+          "date": "2025-04-03", 
+          "time": "10:00 - 11:30", 
+          "type": "Visite guidée historique", 
+          "langue": "Allemand" 
+        },
+        { 
+          "date": "2025-04-03", 
+          "time": "14:00 - 15:30", 
+          "type": "Visite en groupe", 
+          "langue": "Espagnol" 
+        },
+        { 
+          "date": "2025-04-04", 
+          "time": "09:00 - 10:30", 
+          "type": "Visite privée", 
+          "langue": "Français" 
+        },
+        { 
+          "date": "2025-04-04", 
+          "time": "11:00 - 12:30", 
+          "type": "Visite touristique", 
+          "langue": "Anglais" 
+        }
+      ]
+    };
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Guide_1_details.json';
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+</script>
+
+</body>
+</html>
